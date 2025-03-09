@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/cakefavicon.ico" type="image/x-icon">
+    <title>YeonJu's BirthDay Archive</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f8f8;
+            margin: 0;
+            overflow: hidden; /* 확대 시 스크롤 방지 */
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .letter {
+            width: 300px;
+            cursor: pointer;
+            transition: transform 1.5s ease-in-out;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10pt;
+        }
+
+        .open-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            animation: float 2s ease-in-out infinite;
+        }
+
+        .open-btn:hover {
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        /* 둥둥 떠다니는 효과 */
+        @keyframes float {
+            0% { transform: translate(-50%, -50%) translateY(0px); }
+            50% { transform: translate(-50%, -50%) translateY(-10px); }
+            100% { transform: translate(-50%, -50%) translateY(0px); }
+        }
+
+        /* 확대 효과 */
+        .zoom-in {
+            transform: translate(-50%, -50%) scale(3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="images/편지.jpg" alt="편지" class="letter" id="letterImage">
+        <button class="open-btn" id="openButton">OPEN</button>
+    </div>
+
+    <script>
+        const letterImage = document.getElementById("letterImage");
+        const openButton = document.getElementById("openButton");
+        const bgMusic = document.getElementById("bgMusic");
+
+       openButton.addEventListener("click", function () {
+            //bgMusic.play();  // 음악 재생
+            //openButton.style.display = "none";  // 버튼 숨기기
+
+          
+
+            var name=prompt('이름을 입력하세요',"e.g)장선경");
+            if(name==='김연주'){
+                openButton.style.display = "none";  // 버튼 숨기기
+                  // 이미지 확대 애니메이션 추가
+                letterImage.classList.add("zoom-in");
+                  // 1.5초 후 다음 페이지로 이동
+                setTimeout(() => {
+                    window.location.href = "postBox.html"; // 다음 페이지로 이동
+                }, 1500);
+
+            }else{
+                alert('생일자가 아니시네요. 다음에 찾아오세요!');
+            }
+          
+        });
+    </script>
+
+</body>
+</html>

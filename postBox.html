@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/cakefavicon.ico" type="image/x-icon">
+    <title>YeonJu's BirthDay Archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+   <style>
+    #container{
+        width: 100%;
+        height: 100%;
+        align-content: center;
+        justify-content: center;
+    }
+    #header{
+        width: 100%;
+        height:120px;
+        text-align: center;
+        justify-content: center;
+        background-color: white;
+        border-bottom: 1px solid gainsboro;
+        position:fixed;
+        top: 0px;
+        right:0px;
+        z-index: 100;
+    
+    }
+    #header>div{
+        display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center; /* 가로 중앙 정렬 */
+    justify-content: center; /* 세로 중앙 정렬 (필요 시) */
+    height: 100%; /* 부모 요소 높이에 맞추기 */
+    }
+    #header>div>p{
+        font-size: 24px;
+        font-weight: 500;
+    }
+    #header>div>p:first-child{
+        padding-bottom: 0;
+    }
+
+
+    #contents{
+        width: 70%;
+        height: 90%;
+       
+        margin:20px auto;
+        align-content: center;
+        justify-content: center;
+        position: relative;
+        top: 150px;
+    }
+    .postbox{
+        width: 100%;
+        float: left;
+    }
+    .postbox>img{
+        width: 80%;
+        display: block;
+        margin: auto;
+        transition: 1s ease-in;
+    }
+    .postbox>img:hover{
+        transform: scale(1.05);
+    }
+    ul{
+        display: flex;
+    flex-wrap: wrap; /* 필요 시 여러 줄로 배치 */
+    justify-content: center; /* 가운데 정렬 */
+    padding: 0;
+    }
+    li {
+        list-style-type: none;
+        margin: 10px; /* 여백 추가 */
+    }
+ 
+   </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div>
+                <p>물오름달 열흘의 생일함</p>
+            </div>
+            
+        </div>
+        <div id="contents">
+            <ul>
+                <li>
+                    <a href="./letter.html">
+                    <div class="postbox">
+                        <img src="images/postbox2025.png" alt="" srcset="">
+                    </div>
+                </a>
+                </li>
+                <li>
+                    <div class="postbox">
+                        <img src="images/postbox2024.png" alt="" srcset="">
+                    </div>
+                </li>
+                <li>
+                    <div class="postbox">
+                        <img src="images/postbox2023.png" alt="" srcset="">
+                    </div>
+                </li>
+                <li>
+                    <div class="postbox">
+                        <img src="images/postbox2022.png" alt="" srcset="">
+                    </div>
+                </li>
+                <li>
+                    <div class="postbox">
+                        <img src="images/postbox2021.png" alt="" srcset="">
+                    </div>
+                </li>
+            </ul>
+           
+        </div>
+    </div>
+    
+</body>
+</html>
